@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/activity_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="pub.upc.ocr.photo.CropImageActivity">
+
+    <pub.upc.ocr.photo.SeniorCropImageView
+            android:id="@+id/my_crop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+    <Button
+            android:background="#00ff00ff"
+
+            android:text="@string/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/confirm" android:layout_alignParentEnd="true" android:layout_alignParentTop="true"/>
+    <Button
+            android:background="#00ff00ff"
+
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" android:id="@+id/cancel"/>
+    <ImageButton
+            android:layout_width="62dp"
+            android:layout_height="56dp"
+            app:srcCompat="@drawable/refresh"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="152dp"
+            android:scaleType="fitCenter"
+            android:background="#00ff00ff"
+            android:id="@+id/imageButton"/>
+</RelativeLayout>

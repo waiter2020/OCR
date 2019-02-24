@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">OCR</string>
+    <string name="my_switch">开关识别</string>
+    <string name="my_test">测试功能</string>
+    <string name="add">添加</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="hello">欢迎使用！</string>
+</resources>

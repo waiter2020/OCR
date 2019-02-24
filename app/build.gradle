@@ -1,0 +1,64 @@
+apply plugin: 'com.android.application'
+
+buildscript {
+
+    repositories {
+        maven {
+            url 'http://maven.aliyun.com/'
+        }
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public/'
+        }
+
+        google()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.3.1'
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "pub.upc.ocr"
+        minSdkVersion 25
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            matchingFallbacks = ['release', 'debug']
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    //    implementation files('libs/log4j-1.2.17.jar')
+    //    implementation files('libs/aip-java-sdk-4.2.0.jar')
+    //    implementation files('libs/json-20160810.jar')
+    implementation 'top.zibin:Luban:1.1.8'
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'org.jetbrains:annotations:15.0'
+
+}
